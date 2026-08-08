@@ -1,0 +1,6 @@
+{
+  "name": "Remono – Usługi Remontowo-Wykończeniowe",
+  "description": "Remono — remonty, wykończenia wnętrz, elewacje, ścianki dekoracyjne. 15 lat doświadczenia. Ostrów Mazowiecka, Białystok, Warszawa i okolice. Tel: 737 723 870",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,1835 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remono – Usługi Remontowo-Wykończeniowe · 15 Lat Doświadczenia</title>
+    <meta
+      name="description"
+      content="Remono — remonty, wykończenia wnętrz, elewacje, ścianki dekoracyjne. 15 lat doświadczenia. Ostrów Mazowiecka, Białystok, Warszawa i okolice. Tel: 737 723 870"
+    />
+    <link
+      rel="icon"
+      href="https://i.ibb.co/XfTFPpy6/696832525-972158961965817-2177036234974665969-n.jpg"
+      type="image/jpeg"
+    />
+
+    <!-- Image Preloads & Performance Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://i.ibb.co" />
+    <link rel="dns-prefetch" href="https://i.ibb.co" />
+    <link
+      rel="preload"
+      as="image"
+      href="https://i.ibb.co/vv47s31s/476177260-625370059978044-963329981009441229-n.jpg"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="https://i.ibb.co/XfTFPpy6/696832525-972158961965817-2177036234974665969-n.jpg"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Roboto+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg-page: #F8F7F5;
+        --bg-surface: #FFFFFF;
+        --charcoal-dark: #1A1C1E;
+        --charcoal-surface: #24272A;
+        --gold: #C5A059;
+        --gold-dark: #A4813A;
+        --gold-light: #DFCA9B;
+        --gold-pale: #F6F2EA;
+        --muted: #73767A;
+        --text: #1C1E21;
+        --border: #E8E5DC;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+        --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.1);
+
+        --font-heading: 'Barlow Condensed', sans-serif;
+        --font-body: 'Barlow', sans-serif;
+        --font-mono: 'Roboto Mono', monospace;
+      }
+
+      /* Base Reset & Typography */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-family: var(--font-body);
+        background-color: var(--bg-page);
+        color: var(--text);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body {
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .container {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .section-padding {
+        padding: 96px 0;
+      }
+
+      .inline-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        flex-shrink: 0;
+      }
+
+      /* Ornamental Divider System */
+      .ornament {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin: 18px 0 28px 0;
+      }
+      .orn-line {
+        height: 1px;
+        width: 64px;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      }
+      .orn-mark {
+        color: var(--gold);
+        font-size: 8px;
+        line-height: 1;
+      }
+
+      /* 15-Year Recurring Badge */
+      .badge-15 {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 20px;
+        border: 1px solid rgba(197, 160, 89, 0.6);
+        color: var(--gold);
+        border-radius: 9999px;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        background-color: rgba(197, 160, 89, 0.08);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+      }
+
+      .pulse-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--gold);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--gold);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% { transform: scale(0.95); opacity: 0.8; }
+        50% { transform: scale(1.3); opacity: 1; }
+        100% { transform: scale(0.95); opacity: 0.8; }
+      }
+
+      /* Buttons */
+      .btn-gold {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+        color: #FFFFFF;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 15px 32px;
+        border-radius: 6px;
+        border: 1px solid var(--gold);
+        cursor: pointer;
+        box-shadow: 0 6px 20px rgba(197, 160, 89, 0.35);
+        transition: all 0.25s ease;
+      }
+      .btn-gold:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(135deg, var(--gold-dark) 0%, #8A6827 100%);
+        box-shadow: 0 10px 25px rgba(197, 160, 89, 0.45);
+        color: #FFFFFF;
+      }
+
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #FFFFFF;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 15px 32px;
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(8px);
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
+      .btn-outline:hover {
+        transform: translateY(-2px);
+        border-color: var(--gold);
+        color: var(--gold);
+        background-color: rgba(197, 160, 89, 0.15);
+      }
+
+      /* 1. TOP BAR */
+      .top-bar {
+        background-color: var(--charcoal-dark);
+        color: #D2D5DA;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-align: center;
+        padding: 9px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .top-bar-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .top-bar-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .top-bar-phone {
+        color: var(--gold);
+        font-family: var(--font-mono);
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .top-bar-phone:hover {
+        color: #FFFFFF;
+        text-decoration: underline;
+      }
+
+      /* 2. NAVIGATION (STICKY GLASSMORPHIC) */
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 76px;
+      }
+      .brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      /* LOGO CIRCULAR BORDER */
+      .brand-favicon {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--gold);
+        box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .brand-logo:hover .brand-favicon {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.35);
+      }
+
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+      }
+      .brand-title {
+        font-family: var(--font-heading);
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 0.95;
+        color: var(--charcoal-dark);
+        letter-spacing: 0.06em;
+      }
+      .brand-subtitle {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 11px;
+        color: var(--gold-dark);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-top: 2px;
+      }
+
+      .nav-right-container {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        list-style: none;
+      }
+      .nav-link {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--charcoal-dark);
+        position: relative;
+        padding: 6px 0;
+      }
+      .nav-link:hover {
+        color: var(--gold-dark);
+      }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: var(--gold);
+        transition: width 0.25s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .nav-call-btn {
+        background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+        color: #FFFFFF;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        padding: 10px 20px;
+        border-radius: 9999px;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 12px rgba(197, 160, 89, 0.35);
+        border: 1px solid var(--gold);
+      }
+      .nav-call-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(197, 160, 89, 0.45);
+      }
+
+      /* CSS Mobile Hamburger Menu */
+      .nav-toggle-input {
+        display: none;
+      }
+      .hamburger-label {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+        cursor: pointer;
+      }
+      .hamburger-label span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--charcoal-dark);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+
+      /* 3. HERO SECTION */
+      .hero {
+        position: relative;
+        min-height: calc(100vh - 110px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(180deg, rgba(18, 19, 21, 0.85) 0%, rgba(18, 19, 21, 0.94) 100%), url('https://i.ibb.co/vv47s31s/476177260-625370059978044-963329981009441229-n.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 90px 24px;
+      }
+      .hero-content {
+        max-width: 880px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-title {
+        font-family: var(--font-heading);
+        font-weight: 800;
+        font-size: clamp(56px, 8.5vw, 96px);
+        line-height: 0.92;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin: 22px 0 12px 0;
+        color: #FFFFFF;
+        text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+      }
+      .hero-title span {
+        color: var(--gold);
+      }
+      .hero-subtitle {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: clamp(18px, 3vw, 26px);
+        letter-spacing: 0.15em;
+        color: var(--gold-light);
+        text-transform: uppercase;
+        margin-bottom: 22px;
+      }
+      .hero-body {
+        font-size: 19px;
+        font-weight: 300;
+        color: #E2E4E8;
+        max-width: 700px;
+        margin-bottom: 36px;
+        line-height: 1.65;
+      }
+      .hero-chips {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 44px;
+      }
+      .hero-chip {
+        background-color: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(197, 160, 89, 0.45);
+        color: #FFFFFF;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 15px;
+        padding: 9px 20px;
+        border-radius: 9999px;
+        letter-spacing: 0.05em;
+        backdrop-filter: blur(6px);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.2s ease;
+      }
+      .hero-chip:hover {
+        background-color: rgba(197, 160, 89, 0.2);
+        border-color: var(--gold);
+      }
+      .hero-cta {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* SECTION HEADERS */
+      .section-header {
+        text-align: center;
+        max-width: 740px;
+        margin: 0 auto 56px auto;
+      }
+      .section-eyebrow {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.16em;
+        color: var(--gold-dark);
+        text-transform: uppercase;
+        display: block;
+      }
+      .section-title {
+        font-family: var(--font-heading);
+        font-weight: 800;
+        font-size: clamp(34px, 5.2vw, 46px);
+        line-height: 1.05;
+        text-transform: uppercase;
+        color: var(--charcoal-dark);
+        margin-top: 6px;
+        letter-spacing: 0.03em;
+      }
+      .section-title-dark {
+        color: #FFFFFF;
+      }
+
+      /* 4. O NAS SECTION */
+      .about-section {
+        background-color: var(--bg-page);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: start;
+      }
+      .about-text-card {
+        background-color: var(--bg-surface);
+        padding: 44px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        box-shadow: var(--shadow-sm);
+      }
+      .about-text-card h3 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 28px;
+        color: var(--charcoal-dark);
+        text-transform: uppercase;
+        margin-bottom: 18px;
+        letter-spacing: 0.03em;
+      }
+      .about-p {
+        color: #4B4F54;
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 1.75;
+      }
+      .about-p strong {
+        color: var(--charcoal-dark);
+        font-weight: 600;
+      }
+
+      .features-list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background-color: var(--bg-surface);
+        padding: 18px 22px;
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--gold);
+        border-radius: 8px;
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .feature-item:hover {
+        transform: translateX(4px);
+        box-shadow: var(--shadow-md);
+      }
+      .feature-icon-box {
+        width: 40px;
+        height: 40px;
+        background-color: var(--gold-pale);
+        color: var(--gold-dark);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .feature-title {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--charcoal-dark);
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+      }
+
+      .about-contact-card {
+        background: linear-gradient(145deg, var(--charcoal-dark) 0%, var(--charcoal-surface) 100%);
+        border: 1px solid var(--gold);
+        border-radius: 12px;
+        padding: 36px;
+        color: #FFFFFF;
+        margin-top: 24px;
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        overflow: hidden;
+      }
+      .about-contact-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle, rgba(197, 160, 89, 0.15) 0%, transparent 70%);
+        pointer-events: none;
+      }
+      .about-contact-card h4 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 24px;
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 12px;
+      }
+      .card-phone-row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin: 18px 0 22px 0;
+      }
+      .card-phone-number {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 30px;
+        color: #FFFFFF;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .card-phone-number:hover {
+        color: var(--gold);
+      }
+      .fb-link-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--gold);
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding-bottom: 4px;
+        border-bottom: 1px solid var(--gold);
+      }
+      .fb-link-btn:hover {
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+      }
+
+      /* 5. USŁUGI SECTION */
+      .services-section {
+        background-color: var(--bg-surface);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+      .service-card {
+        background-color: var(--bg-page);
+        border: 1px solid var(--border);
+        border-top: 4px solid var(--gold);
+        border-radius: 12px;
+        padding: 40px;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-lg);
+        background-color: #FFFFFF;
+      }
+      .service-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+      .service-icon-box {
+        width: 52px;
+        height: 52px;
+        background: linear-gradient(135deg, var(--gold-pale) 0%, #FFFFFF 100%);
+        border: 1px solid var(--gold);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold-dark);
+        box-shadow: 0 4px 12px rgba(197, 160, 89, 0.15);
+      }
+      .service-title {
+        font-family: var(--font-heading);
+        font-weight: 800;
+        font-size: 26px;
+        color: var(--charcoal-dark);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      .service-subtitle {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 15px;
+        color: var(--gold-dark);
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        letter-spacing: 0.05em;
+      }
+      .service-desc {
+        color: #52565B;
+        font-size: 15px;
+        margin-bottom: 22px;
+        line-height: 1.65;
+      }
+      .service-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .service-list li {
+        font-size: 14px;
+        color: var(--text);
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-weight: 500;
+      }
+      .service-list li-icon {
+        color: var(--gold);
+        margin-top: 3px;
+        flex-shrink: 0;
+      }
+
+      /* 6. OBSZAR DZIAŁANIA SECTION */
+      .coverage-section {
+        background: linear-gradient(180deg, var(--charcoal-dark) 0%, #111214 100%);
+        color: #FFFFFF;
+      }
+      .coverage-intro {
+        text-align: center;
+        color: #C5C9D0;
+        max-width: 780px;
+        margin: -24px auto 44px auto;
+        font-size: 18px;
+        line-height: 1.65;
+      }
+      .locations-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        max-width: 1020px;
+        margin: 0 auto;
+      }
+      .location-chip {
+        background-color: var(--charcoal-surface);
+        border: 1px solid rgba(197, 160, 89, 0.4);
+        color: #FFFFFF;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 12px 24px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.25s ease;
+      }
+      .location-chip:hover {
+        border-color: var(--gold);
+        background-color: rgba(197, 160, 89, 0.18);
+        color: var(--gold);
+        transform: translateY(-2px);
+      }
+      .location-chip.home-base {
+        background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+        color: #FFFFFF;
+        border-color: var(--gold);
+        font-weight: 800;
+        font-size: 20px;
+        padding: 14px 30px;
+        box-shadow: 0 6px 24px rgba(197, 160, 89, 0.45);
+      }
+      .home-tag {
+        font-size: 11px;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #FFFFFF;
+        padding: 3px 10px;
+        border-radius: 4px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      /* 7. REALIZACJE (GALLERY) SECTION */
+      .gallery-section {
+        background-color: var(--bg-page);
+        content-visibility: auto;
+      }
+
+      .gallery-toggle-checkbox {
+        display: none;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .gallery-hidden-grid {
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .gallery-item {
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        aspect-ratio: 4 / 3;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .gallery-item:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+      .gallery-item:hover img {
+        transform: scale(1.08);
+      }
+
+      .gallery-toggle-wrapper {
+        text-align: center;
+        margin-top: 44px;
+      }
+
+      .gallery-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: var(--bg-surface);
+        color: var(--charcoal-dark);
+        border: 2px solid var(--gold);
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 15px 36px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        box-shadow: var(--shadow-sm);
+      }
+      .gallery-toggle-btn:hover {
+        background-color: var(--gold);
+        color: #FFFFFF;
+        box-shadow: 0 6px 20px rgba(197, 160, 89, 0.3);
+      }
+
+      .label-collapse {
+        display: none;
+      }
+
+      /* CSS State for Checkbox Gallery Expand */
+      .gallery-toggle-checkbox:checked ~ .gallery-hidden-grid {
+        display: grid;
+      }
+      .gallery-toggle-checkbox:checked ~ .gallery-toggle-wrapper .label-expand {
+        display: none;
+      }
+      .gallery-toggle-checkbox:checked ~ .gallery-toggle-wrapper .label-collapse {
+        display: inline-block;
+      }
+
+      .fb-more-wrapper {
+        text-align: center;
+        margin-top: 28px;
+      }
+      .btn-fb-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.08em;
+        color: var(--gold-dark);
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--gold);
+        padding-bottom: 4px;
+      }
+      .btn-fb-more:hover {
+        color: var(--charcoal-dark);
+        border-color: var(--charcoal-dark);
+      }
+
+      /* 8. KONTAKT SECTION */
+      .contact-section {
+        background-color: var(--bg-surface);
+        border-top: 1px solid var(--border);
+      }
+      .contact-card-main {
+        background-color: var(--bg-page);
+        border: 1px solid var(--border);
+        border-top: 4px solid var(--gold);
+        border-radius: 12px;
+        padding: 52px 40px;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        box-shadow: var(--shadow-md);
+      }
+      .contact-phone-display {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: clamp(38px, 6.5vw, 56px);
+        color: var(--gold-dark);
+        letter-spacing: 0.04em;
+        margin: 20px 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+      }
+      .contact-phone-display:hover {
+        color: var(--charcoal-dark);
+      }
+      .contact-coverage-note {
+        font-size: 16px;
+        color: var(--muted);
+        max-width: 660px;
+        margin: 0 auto 36px auto;
+        line-height: 1.65;
+      }
+      .contact-actions {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      /* 9. FOOTER */
+      .footer {
+        background-color: var(--charcoal-dark);
+        color: #E2E4E8;
+        border-top: 3px solid var(--gold);
+        padding: 68px 0 36px 0;
+        font-size: 14px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        gap: 48px;
+        margin-bottom: 48px;
+      }
+
+      /* FOOTER LOGO CIRCULAR BORDER */
+      .footer-favicon {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--gold);
+        box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.25);
+      }
+
+      .footer-brand-title {
+        font-family: var(--font-heading);
+        font-weight: 800;
+        font-size: 28px;
+        color: #FFFFFF;
+        letter-spacing: 0.06em;
+      }
+      .footer-heading {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.12em;
+        color: var(--gold);
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+      .footer-towns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        color: #B0B4BC;
+        line-height: 1.8;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 28px;
+        text-align: center;
+        color: #8C9098;
+        font-size: 13px;
+      }
+
+      /* Mobile Sticky Call Button */
+      .mobile-sticky-call {
+        display: none;
+      }
+
+      /* MEDIA QUERIES & RESPONSIVENESS */
+      @media (max-width: 992px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+        .gallery-grid, .gallery-hidden-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .top-bar {
+          padding: 7px 8px;
+          font-size: clamp(9.5px, 2.5vw, 12.5px);
+          letter-spacing: 0.02em;
+        }
+        .top-bar-content {
+          flex-wrap: nowrap !important;
+          white-space: nowrap;
+          gap: clamp(4px, 1.5vw, 12px);
+          justify-content: center;
+          overflow-x: auto;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+        .top-bar-content::-webkit-scrollbar {
+          display: none;
+        }
+        .top-bar-item {
+          gap: 4px;
+        }
+        .section-padding {
+          padding: 64px 0;
+        }
+        .nav-call-btn {
+          display: none !important;
+        }
+        .mobile-sticky-call {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          position: fixed;
+          bottom: 16px;
+          left: 16px;
+          right: 16px;
+          z-index: 999;
+          background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+          color: #FFFFFF;
+          font-family: var(--font-heading);
+          font-weight: 700;
+          font-size: 16px;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          padding: 14px 24px;
+          border-radius: 9999px;
+          border: 1px solid var(--gold);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 16px rgba(197, 160, 89, 0.3);
+          text-decoration: none;
+        }
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 76px;
+          left: 0;
+          right: 0;
+          background-color: var(--bg-surface);
+          flex-direction: column;
+          padding: 24px;
+          border-bottom: 2px solid var(--gold);
+          box-shadow: var(--shadow-lg);
+          gap: 18px;
+        }
+        .hamburger-label {
+          display: flex;
+        }
+        .nav-toggle-input:checked ~ .nav-right-container .nav-links {
+          display: flex;
+        }
+        .gallery-grid, .gallery-hidden-grid {
+          grid-template-columns: 1fr;
+        }
+        .contact-card-main {
+          padding: 32px 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 1. TOP BAR -->
+    <header class="top-bar">
+      <div class="container top-bar-content">
+        <div class="top-bar-item">
+          <svg class="inline-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>REMONTY · WYKOŃCZENIA · ELEWACJE · 15 LAT DOŚWIADCZENIA</span>
+        </div>
+        <span>·</span>
+        <a href="tel:737723870" class="top-bar-phone">
+          <svg class="inline-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          737 723 870
+        </a>
+      </div>
+    </header>
+
+    <!-- 2. NAVIGATION (STICKY) -->
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <!-- Brand Logo with Circular Border -->
+        <a href="#" class="brand-logo" aria-label="Remono Strona Główna">
+          <img
+            src="https://i.ibb.co/XfTFPpy6/696832525-972158961965817-2177036234974665969-n.jpg"
+            alt="Remono Logo Okrągłe"
+            class="brand-favicon"
+            width="46"
+            height="46"
+            decoding="async"
+          />
+          <div class="brand-text">
+            <span class="brand-title">REMONO</span>
+            <span class="brand-subtitle">Usługi Remontowe</span>
+          </div>
+        </a>
+
+        <!-- CSS Mobile Menu Checkbox Toggle -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+
+        <!-- Navigation Right Container -->
+        <div class="nav-right-container">
+          <ul class="nav-links">
+            <li><a href="#about" class="nav-link">O Nas</a></li>
+            <li><a href="#services" class="nav-link">Usługi</a></li>
+            <li><a href="#coverage" class="nav-link">Obszar Działania</a></li>
+            <li><a href="#gallery" class="nav-link">Realizacje</a></li>
+            <li><a href="#contact" class="nav-link">Kontakt</a></li>
+          </ul>
+
+          <!-- Call Action Pill Button -->
+          <a href="tel:737723870" class="nav-call-btn">
+            <svg class="inline-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            ZADZWOŃ
+          </a>
+
+          <!-- Hamburger Button Label -->
+          <label for="nav-toggle" class="hamburger-label" aria-label="Otwórz menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 3. HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="badge-15">
+          <span class="pulse-dot"></span>
+          15 LAT DOŚWIADCZENIA
+        </span>
+        <h1 class="hero-title">REMONO</h1>
+        <div class="hero-subtitle">USŁUGI REMONTOWO-WYKOŃCZENIOWE</div>
+        <p class="hero-body">
+          Remonty, kompleksowe wykończenia wnętrz, elewacje i ścianki dekoracyjne —
+          15 lat doświadczenia w branży budowlanej.
+        </p>
+        <div class="hero-chips">
+          <span class="hero-chip">
+            <svg class="inline-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Remonty
+          </span>
+          <span class="hero-chip">
+            <svg class="inline-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.7-.71 1.7-1.61 0-.43-.17-.83-.44-1.12-.27-.29-.44-.69-.44-1.13 0-.89.71-1.61 1.61-1.61H16.5c3.03 0 5.5-2.47 5.5-5.5C22 6.5 17.5 2 12 2z"/></svg>
+            Wykończenia wnętrz
+          </span>
+          <span class="hero-chip">
+            <svg class="inline-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v6"/><path d="M15 9v6"/><path d="M9 15v6"/></svg>
+            Elewacje
+          </span>
+          <span class="hero-chip">
+            <svg class="inline-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+            Ścianki dekoracyjne
+          </span>
+        </div>
+        <div class="hero-cta">
+          <a href="tel:737723870" class="btn-gold">
+            <svg class="inline-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            ZADZWOŃ: 737 723 870
+          </a>
+          <a href="#coverage" class="btn-outline">
+            <svg class="inline-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            OBSZAR DZIAŁANIA
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. O NAS SECTION -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">DOŚWIADCZENIE I JAKOŚĆ</span>
+          <h2 class="section-title">O NASZEJ FIRMIE</h2>
+          <div class="ornament">
+            <span class="orn-line"></span>
+            <span class="orn-mark">◆</span>
+            <span class="orn-line"></span>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Text Column -->
+          <div class="about-text-card">
+            <h3>15 Lat Tradycji w Wykończeniach Wnętrz</h3>
+            <p class="about-p">
+              Firma <strong>REMONO</strong> to sprawdzony wykonawca z ponad 15-letnim doświadczeniem w branży budowlano-remontowej. Oferujemy szeroki wachlarz profesjonalnych usług, od kompleksowych remontów mieszkań i domów, przez precyzyjne wykończenia pod klucz, aż po wykonywanie nowoczesnych elewacji oraz artystycznych ścianek dekoracyjnych.
+            </p>
+            <p class="about-p">
+              Obsługujemy inwestycje na terenie województwa mazowieckiego i podlaskiego. Każde zlecenie traktujemy indywidualnie, zapewniając fachowe doradztwo materiałowe, czystość na placu budowy oraz rzetelne dotrzymywanie ustalonych terminów.
+            </p>
+          </div>
+
+          <!-- Feature Rows Column & Contact Card -->
+          <div>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <span class="feature-title">Remonty mieszkań i domów</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.7-.71 1.7-1.61 0-.43-.17-.83-.44-1.12-.27-.29-.44-.69-.44-1.13 0-.89.71-1.61 1.61-1.61H16.5c3.03 0 5.5-2.47 5.5-5.5C22 6.5 17.5 2 12 2z"/></svg>
+                </div>
+                <span class="feature-title">Kompleksowe wykończenia wnętrz</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v6"/><path d="M15 9v6"/><path d="M9 15v6"/></svg>
+                </div>
+                <span class="feature-title">Elewacje i termomodernizacje</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                </div>
+                <span class="feature-title">Ścianki dekoracyjne i zabudowy</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <span class="feature-title">15 lat udokumentowanego doświadczenia</span>
+              </div>
+            </div>
+
+            <!-- Dark Gold Contact Card -->
+            <div class="about-contact-card">
+              <h4>SKONTAKTUJ SIĘ Z NAMI</h4>
+              <p style="color: #D2D5DA; font-size: 15px;">
+                Chcesz omówić projekt lub uzyskać bezpłatną wycenę?
+              </p>
+              <div class="card-phone-row">
+                <a href="tel:737723870" class="card-phone-number">
+                  <svg class="inline-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  737 723 870
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.facebook.com/people/Remono-Us%C5%82ugi-Remontowo-Wyko%C5%84czeniowe/61573082531612/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="fb-link-btn"
+                >
+                  <svg class="inline-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  Oficjalny profil Facebook →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. USŁUGI SECTION -->
+    <section id="services" class="services-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">ZAKRES OFERTY</span>
+          <h2 class="section-title">NASZE USŁUGI REMONTOWO-WYKOŃCZENIOWE</h2>
+          <div class="ornament">
+            <span class="orn-line"></span>
+            <span class="orn-mark">◆</span>
+            <span class="orn-line"></span>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1: REMONTY -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <h3 class="service-title">REMONTY</h3>
+            </div>
+            <div class="service-subtitle">Kompleksowe remonty mieszkań i domów</div>
+            <p class="service-desc">
+              Przeprowadzamy pełne modernizacje wnętrz – od wyburzeń i adaptacji pomieszczeń, po wykończenie i montaż. Dajemy drugie życie starym przestrzeniom i doprowadzamy stany surowe do używalności.
+            </p>
+            <ul class="service-list">
+              <li>
+                <svg class="inline-icon service-list li-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Modernizacja instalacji elektrycznych i hydraulicznych
+              </li>
+              <li>
+                <svg class="inline-icon service-list li-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Prostowanie ścian, wylewki i zabudowy z płyt G-K
+              </li>
+              <li>
+                <svg class="inline-icon service-list li-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Kompleksowe remonty łazienek oraz kuchni
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2: WYKOŃCZENIA WNĘTRZ -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.7-.71 1.7-1.61 0-.43-.17-.83-.44-1.12-.27-.29-.44-.69-.44-1.13 0-.89.71-1.61 1.61-1.61H16.5c3.03 0 5.5-2.47 5.5-5.5C22 6.5 17.5 2 12 2z"/></svg>
+              </div>
+              <h3 class="service-title">WYKOŃCZENIA WNĘTRZ</h3>
+            </div>
+            <div class="service-subtitle">Pełne wykończenie od podstaw</div>
+            <p class="service-desc">
+              Realizujemy wykończenia mieszkań i domów ze stanu deweloperskiego pod klucz. Dbamy o wyjątkową estetykę, idealnie proste płaszczyzny i perfekcyjne spoiny.
+            </p>
+            <ul class="service-list">
+              <li>
+                <svg class="inline-icon service-list li-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Układanie glazury, terakoty, gresu i spieków
+              </li>
+              <li>
+                <svg class="inline-icon service-list li-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Gładzie gipsowe bezpyłowe oraz malowanie
+              </li>
+              <li>
+                <svg class="inline-icon service-list li-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Montaż podłóg, drzwi wewnętrznych oraz listew
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3: ELEWACJE -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v6"/><path d="M15 9v6"/><path d="M9 15v6"/></svg>
+              </div>
+              <h3 class="service-title">ELEWACJE</h3>
+            </div>
+            <div class="service-subtitle">Wykonanie i renowacja elewacji budynków</div>
+            <p class="service-desc">
+              Wykonujemy trwałe i estetyczne elewacje domów jednorodzinnych oraz obiektów usługowych. Stosujemy nowoczesne tynki silikonowe, mozaikowe i elementy ozdobne.
+            </p>
+            <ul class="service-list">
+              <li>
+                <svg class="inline-icon service-list li-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Ocieplenia budynków (styropian / wełna mineralna)
+              </li>
+              <li>
+                <svg class="inline-icon service-list li-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Tynki elewacyjne, strukturalne i ozdobne
+              </li>
+              <li>
+                <svg class="inline-icon service-list li-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Mycie, odświeżanie i renowacja istniejących elewacji
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 4: ŚCIANKI DEKORACYJNE -->
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+              </div>
+              <h3 class="service-title">ŚCIANKI DEKORACYJNE</h3>
+            </div>
+            <div class="service-subtitle">Indywidualne projekty wnętrzarskie</div>
+            <p class="service-desc">
+              Tworzymy unikalne akcenty dekoracyjne w salonach, sypialniach i korytarzach. Wykonujemy nowoczesne ścianki TV, panele ozdobne i tynki architektoniczne.
+            </p>
+            <ul class="service-list">
+              <li>
+                <svg class="inline-icon service-list li-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Montaż paneli ściennych, lameli i spieków kwarcowych
+              </li>
+              <li>
+                <svg class="inline-icon service-list li-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Tynki ozdobne (beton architektoniczny, efekt stiuku)
+              </li>
+              <li>
+                <svg class="inline-icon service-list li-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Dedykowane zabudowy kartonowo-gipsowe z podświetleniem LED
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. OBSZAR DZIAŁANIA SECTION -->
+    <section id="coverage" class="coverage-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">ZASIĘG USŁUG</span>
+          <h2 class="section-title section-title-dark">GDZIE DZIAŁAMY</h2>
+          <div class="ornament">
+            <span class="orn-line"></span>
+            <span class="orn-mark">◆</span>
+            <span class="orn-line"></span>
+          </div>
+        </div>
+
+        <p class="coverage-intro">
+          Sprawnie i profesjonalnie realizujemy projekty w kluczowych miejscowościach oraz miastach regionu:
+        </p>
+
+        <!-- 8 Location Chips -->
+        <div class="locations-grid">
+          <div class="location-chip">
+            <svg class="inline-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Ostrów Mazowiecka
+          </div>
+          <div class="location-chip">
+            <svg class="inline-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Białystok
+          </div>
+          <div class="location-chip">
+            <svg class="inline-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Czyżew
+          </div>
+          <div class="location-chip">
+            <svg class="inline-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Zambrów
+          </div>
+          <div class="location-chip">
+            <svg class="inline-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Małkinia Górna
+          </div>
+          <div class="location-chip">
+            <svg class="inline-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Ostrołęka
+          </div>
+          <div class="location-chip">
+            <svg class="inline-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Warszawa
+          </div>
+          <div class="location-chip">
+            <svg class="inline-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Łomża
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. REALIZACJE (GALLERY) SECTION -->
+    <section id="gallery" class="gallery-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">PORTFOLIO PRAC</span>
+          <h2 class="section-title">NASZE REALIZACJE</h2>
+          <p style="color: var(--muted); margin-top: 8px;">
+            Zobacz wybrane zdjęcia z przeprowadzonych remontów, wykończeń oraz elewacji.
+          </p>
+          <div class="ornament">
+            <span class="orn-line"></span>
+            <span class="orn-mark">◆</span>
+            <span class="orn-line"></span>
+          </div>
+        </div>
+
+        <!-- CSS-Only Gallery Toggle Checkbox -->
+        <input type="checkbox" id="gallery-toggle" class="gallery-toggle-checkbox" />
+
+        <!-- First 8 Visible Images with Fast Loading Attributes -->
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/m5rRnNwS/476211158-625370213311362-7473554476088214227-n.jpg"
+              alt="Realizacja Remono 1"
+              width="400"
+              height="300"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/sxgLvXv/476043440-625370203311363-2287474495574515259-n.jpg"
+              alt="Realizacja Remono 2"
+              width="400"
+              height="300"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/vx1FnNg9/476202422-625370189978031-2940608552390886299-n.jpg"
+              alt="Realizacja Remono 3"
+              width="400"
+              height="300"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/LDq46fDL/475855073-625370153311368-2323061619864704381-n.jpg"
+              alt="Realizacja Remono 4"
+              width="400"
+              height="300"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/DDMKLYhW/476228308-625370133311370-5527637877232230182-n.jpg"
+              alt="Realizacja Remono 5"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/Ngjp2tzs/476077595-625370093311374-1264875323282247293-n.jpg"
+              alt="Realizacja Remono 6"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/S4xxn8v4/476212177-625370076644709-6617511009117684877-n.jpg"
+              alt="Realizacja Remono 7"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/9H09xjpY/476082442-625370013311382-7432859187313012224-n.jpg"
+              alt="Realizacja Remono 8"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+
+        <!-- Hidden 8 Images (Expandable via CSS) -->
+        <div class="gallery-hidden-grid">
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/ynN90szv/476100808-625369989978051-6893693246835269781-n.jpg"
+              alt="Realizacja Remono 9"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/7xDfkpvx/476121408-625369956644721-6547167664366650428-n.jpg"
+              alt="Realizacja Remono 10"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/DgVnjf4m/475817294-625369943311389-4970425713437190013-n.jpg"
+              alt="Realizacja Remono 11"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/bg5yq5qr/476192138-625369919978058-2972986430349633857-n.jpg"
+              alt="Realizacja Remono 12"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/YBvtCFjm/476317205-625369876644729-1582847582498263592-n.jpg"
+              alt="Realizacja Remono 13"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/RTphYq24/475883907-625369866644730-7467380962779836528-n.jpg"
+              alt="Realizacja Remono 14"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/Y6B1ckp/476352934-625369836644733-8751433994519967202-n.jpg"
+              alt="Realizacja Remono 15"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://i.ibb.co/zHTSGLqJ/476203530-625369796644737-1478198298711440788-n.jpg"
+              alt="Realizacja Remono 16"
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+
+        <!-- Toggle Button for Expand / Collapse -->
+        <div class="gallery-toggle-wrapper">
+          <label for="gallery-toggle" class="gallery-toggle-btn">
+            <span class="label-expand">POKAŻ WSZYSTKIE (16) ↓</span>
+            <span class="label-collapse">ZWIŃ GALERIĘ ↑</span>
+          </label>
+        </div>
+
+        <!-- Facebook More Link -->
+        <div class="fb-more-wrapper">
+          <a
+            href="https://www.facebook.com/people/Remono-Us%C5%82ugi-Remontowo-Wyko%C5%84czeniowe/61573082531612/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-fb-more"
+          >
+            <svg class="inline-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            WIĘCEJ ZDJĘĆ NA FACEBOOKU →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. KONTAKT SECTION -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">NAWIĄŻ KONTAKT</span>
+          <h2 class="section-title">SKONTAKTUJ SIĘ Z NAMI</h2>
+          <div class="ornament">
+            <span class="orn-line"></span>
+            <span class="orn-mark">◆</span>
+            <span class="orn-line"></span>
+          </div>
+        </div>
+
+        <div class="contact-card-main">
+          <span class="badge-15">BEZPŁATNA KONSULTACJA I WYCENA</span>
+          <h3 style="font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--charcoal-dark); margin-top: 18px; text-transform: uppercase;">
+            ZADZWŃ LUB NAPISZ DO NAS
+          </h3>
+          <a href="tel:737723870" class="contact-phone-display">
+            <svg class="inline-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            737 723 870
+          </a>
+
+          <p class="contact-coverage-note">
+            Obsługujemy klientów indywidualnych oraz firmy w regionie: Ostrów Mazowiecka, Białystok, Czyżew, Zambrów, Małkinia Górna, Ostrołęka, Warszawa, Łomża i okolice.
+          </p>
+
+          <div class="contact-actions">
+            <a href="tel:737723870" class="btn-gold">
+              <svg class="inline-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              ZADZWOŃ TERAZ
+            </a>
+            <a
+              href="https://www.facebook.com/people/Remono-Us%C5%82ugi-Remontowo-Wyko%C5%84czeniowe/61573082531612/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-gold"
+              style="background: #1877F2; border-color: #1877F2; color: #FFFFFF;"
+            >
+              <svg class="inline-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              PROFIL FACEBOOK
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Column 1: Brand with Circular Logo -->
+          <div>
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+              <img
+                src="https://i.ibb.co/XfTFPpy6/696832525-972158961965817-2177036234974665969-n.jpg"
+                alt="Remono Logo Stopka"
+                class="footer-favicon"
+                width="42"
+                height="42"
+                decoding="async"
+              />
+              <span class="footer-brand-title">REMONO</span>
+            </div>
+            <p style="color: #A3A7AF; line-height: 1.65; max-width: 350px;">
+              Usługi Remontowo-Wykończeniowe z 15-letnim doświadczeniem. Kompleksowe remonty, elewacje, wykończenia wnętrz oraz ścianki dekoracyjne.
+            </p>
+          </div>
+
+          <!-- Column 2: Region -->
+          <div>
+            <div class="footer-heading">Obszar Działania</div>
+            <div class="footer-towns">
+              <span>Ostrów Mazowiecka</span> ·
+              <span>Białystok</span> ·
+              <span>Czyżew</span> ·
+              <span>Zambrów</span> ·
+              <span>Małkinia Górna</span> ·
+              <span>Ostrołęka</span> ·
+              <span>Warszawa</span> ·
+              <span>Łomża</span>
+            </div>
+          </div>
+
+          <!-- Column 3: Contact info -->
+          <div>
+            <div class="footer-heading">Kontakt</div>
+            <p style="margin-bottom: 10px;">
+              <strong style="color: #FFFFFF;">Tel:</strong>
+              <a href="tel:737723870" style="color: var(--gold); font-family: var(--font-mono); font-weight: 700; margin-left: 6px;">
+                737 723 870
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://www.facebook.com/people/Remono-Us%C5%82ugi-Remontowo-Wyko%C5%84czeniowe/61573082531612/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color: var(--gold); text-decoration: underline; display: inline-flex; align-items: center; gap: 6px;"
+              >
+                <svg class="inline-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Oficjalny profil Facebook
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 REMONO Usługi Remontowo-Wykończeniowe. Wszelkie prawa zastrzeżone. 15 Lat Doświadczenia.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Sticky Call Button -->
+    <a href="tel:737723870" class="mobile-sticky-call" aria-label="Zadzwoń do Remono">
+      <svg class="inline-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      ZADZWOŃ: 737 723 870
+    </a>
+  </body>
+</html>
